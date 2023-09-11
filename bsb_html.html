@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.39.0/gradio.js"></script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+        .btn {
+            border-radius: 8px;
+            background-color: #3662f5;
+            width: 70px;
+            height: 40px;
+            font-size: 16px;
+            border-style: solid;
+            border-color: white;
+            color: white;
+            margin-left: 24px;
+            margin-bottom: 24px;
+          }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .bsb_main_card_image {
+            width: 100% !important;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+        body {
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0B2447;
+        }
+        
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px 50px;
+            padding: 100px 50px;
+        }
+        
+        .container .card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 350px;
+            max-width: 100%;
+            height: 300px;
+            background: white;
+            border-radius: 20px;
+            transition: 0.5s;
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+        }
+        
+        .container .card:hover {
+            height: 400px;
+        }
+        
+        .container .card .img-box {
+            position: absolute;
+            top: 20px;
+            width: 300px;
+            height: 220px;
+            background: #EEEEEE;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        
+        .container .card:hover .img-box {
+            top: -100px;
+            scale: 0.75;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+        
+        .container .card .img-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .container .card .content {
+            position: absolute;
+            top: 252px;
+            width: 100%;
+            height: 35px;
+            padding: 0 30px;
+            text-align: center;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        
+        .container .card:hover .content {
+            top: 130px;
+            height: 250px;
+        }
+        
+        .container .card .content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--clr);
+        }
+        
+        .container .card .content p {
+            color: #333;
+        }
+        
+        .container .card .content a {
+            position: relative;
+            top: 15px;
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            background: var(--clr);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .container .card .content a:hover {
+            opacity: 0.8;
+            background-color: #000000;
+            color: aqua;
+        }
+        
+        @media (max-width: 480px) {
+            .container .card {
+                width: 230px;
+                border-radius: 15px;
+            }
+        
+            .container .card .img-box {
+                width: 185px;
+                border-radius: 10px;
+            }
+        
+            .container .card .content p {
+                font-size: 0.8rem;
+            }
+        
+            .container .card .content a {
+                font-size: 0.9rem;
+            }
+        }
+
+
+        
+
+
+        .flex-container {
+            display: flex;
+        }
+        
+        .flex-child {
+            flex: 1;
+        }  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        @media only screen and (min-width: 768px) {
+        
+         
+          .bsb_logo_container {
+                text-align: center;
+                padding-left: 5%;
+            }
+        
+            .logo_gif {
+                width: 120px;
+                height: 120px;
+                border-radius: 60px;
+                margin-left: -100%;
+                margin-top: 10%;
+        
+            } 
+        
+            .bsb_logo_text {
+                font-size: 450% !important;
+               
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+        
+            .bsb_logo_container {
+                text-align: center;
+                padding-left: 10%;
+                border-radius: 2px;
+                border-width: 2px;
+                border-color: white;
+            }
+        
+            .logo_gif {
+                width: 100px;
+                height: 100px;
+                border-radius: 60px;
+                padding: 20px;
+                margin-left: -180px;
+            }
+        
+        }
+        
+        .bsb_logo_text {
+            color: white;
+            font-family: "Times New Roman";
+            margin-top: 15%;
+            font-size: 400%;
+            padding-left: 20%;
+        
+        }
+
+        .chat-bot-container {
+            padding-left: 5%;
+            width: 95%;
+            box-sizing: border-box;
+        }
+        
+        .chatgpt_clone_description_1 {
+            color: #EEEEEE;
+            font-family: "Roboto";
+            padding-left: 10%;
+        }
+
+
+    </style>
+
+    <meta charset="UTF-8">
+    
+    
+
+</head>
+
+<body>
+    
+    <div style="background-color:#0B2447;">
+        <div class="bsb_logo_container d-none d-md-inline">
+            <!-- <img src="bsb_logo.png" class="bsb_logo"> -->
+            <div class="flex-container">
+                <div class="flex-child">
+                    <p class="bsb_logo_text">BSB</p>
+                </div>
+                <div class="flex-child">
+                    <img src="https://res.cloudinary.com/drxtdetlg/image/upload/v1693374470/umecsyfg2rjbv0ys7fc1.gif" class="logo_gif mt-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+
+
+        <div class="container">
+            <div class="card" style="--clr: #009688">
+                <div class="img-box">
+                    <a href="a_a_why_bharat.html"> 
+                        <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693339642/replicate-prediction-drwj3bzba7l33hj4zomp2lq4wu_fsw9xo.png" class="bsb_main_card_image pt-2" />
+                        </a>
+                </div>
+                <div class="content">
+                    <h2>Why Bharat ?</h2>
+                    <p>
+                        Bharat College covers 100+ acres, fostering a holistic atmosphere prioritizing students' well-being...
+                    </p>
+                    <a href="a_a_why_bharat.html"> Know More </a>
+                </div>
+            </div>
+
+
+            <div class="card" style="--clr: #FF3E7F">
+                <div class="img-box">
+                    <a href="a_k_biet_superiors.html"> 
+                        <img src="https://res.cloudinary.com/dyukqlm2w/image/upload/v1693610042/ht5sbm6m9q9ytjdxipok.jpg" class="bsb_main_card_image pt-2" />
+                        </a>
+                </div>
+                <div class="content">
+                    <h2>BIET Superiors</h2>
+                    <p>
+                        BIET's leaders, including Prof. G. Kumaraswamy Rao, Sri Ch. Venugopal Reddy, and Dr. Merugu Lakshminarayana, excel in their fields, contributing to education and research....
+                    </p>
+                    <a href="a_k_biet_superiors.html"> Know More </a>
+                </div>
+            </div>
+
+
+            <div class="card" style="--clr: #03A9F4">
+                <div class="img-box">
+                    <a href="a_b_achievements.html">
+                        <img src="https://res.cloudinary.com/dyukqlm2w/image/upload/v1693556861/rppt0yrt2zxrwgjxnxjb.jpg" class="bsb_main_card_image" />
+                    </a>                    
+                </div>
+                <div class="content">
+                    <h2>Achievements</h2>
+                    <p>
+                        BIET got Asian Book Record for the organisation of Eco Friendly Ganesh Immersion on 18th Sep, 2018...
+                    </p>
+                    <a href="a_b_achievements.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #009688">
+                <div class="img-box">
+                    <a href="a_c_standards_and_guidelines.html">
+                        <img src="https://res.cloudinary.com/dyukqlm2w/image/upload/v1693312516/pblkrsxdtpexerdgqcqh.jpg" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Standards and guidelines</h2>
+                    <p>
+                        1. Collecting ID Card: - Employees must obtain their ID card from the respective...
+                    </p>
+                    <a href="a_c_standards_and_guidelines.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF3E7F">
+                <div class="img-box">
+                    <a href="a_d_branches.html">
+                        <img src="https://res.cloudinary.com/dait0syig/image/upload/v1693432351/mi0dc5eycx1ulpiunncq.png" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Branches</h2>
+                    <p>
+                        Computer Science and Engineering (CSE):* - Focuses on computing principles, algorithms...
+                    </p>
+                    <a href="a_d_branches.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #03A9F4">
+                <div class="img-box">
+                    <a href="a_e_branch_directors.html">
+                        <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693342445/a_5_branch_directors_shmjoa.png" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Branch Directors</h2>
+                    <p>
+                        Here are some details of bharat college branch HOD’s , who helps you to manage...
+                    </p>
+                    <a href="a_e_branch_directors.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #009688">
+                <div class="img-box">
+                    <a href="a_f_highly_paid_scholars.html">
+                        <img src="https://res.cloudinary.com/dyukqlm2w/image/upload/v1693312711/jyprndyi5hwiq2b6dwgv.jpg" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Recently Paid Scholars</h2>
+                    <p>
+                        Our college often perform duties in an environment similar to where you hope to pursue your career...
+                    </p>
+                    <a href="a_f_highly_paid_scholars.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF3E7F">
+                <div class="img-box">
+                    <a href="a_g_infrastructure.html">
+                        <img src="https://res.cloudinary.com/dait0syig/image/upload/v1693434255/wnkhyqeyb28xdnqwqasz.jpg" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Infrastructure</h2>
+                    <p>
+                        The colleges have very good infrastructure with advanced laboratories equipped...
+                    </p>
+                    <a href="a_g_infrastructure.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #03A9F4">
+                <div class="img-box">
+                    <a href="a_h_campus_residence.html">
+                        <img src="https://res.cloudinary.com/dait0syig/image/upload/v1693434084/pbuqmmaqwrvslprx56tv.jpg" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Campus Residence</h2>
+                    <p>
+                        BIET Boys Hostel : Facilities : Free Wifi , Homely Food , Hot Water , Washing Machine , Purified...
+                    </p>
+                    <a href="a_h_campus_residence.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #009688">
+                <div class="img-box">
+                    <a href="a_i_cafeteria.html">                            
+                        <img src="https://res.cloudinary.com/dyukqlm2w/image/upload/v1693312886/h0arykdbaprrmxicwsj0.jpg" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Cafeteria</h2>
+                    <p>
+                        A Hot Cup of Happiness. Start Your Day Right. The Only Shots You Need. Better Beans, Better Coffee...
+                    </p>
+                    <a href="a_i_cafeteria.html"> Know More </a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF3E7F">
+                <div class="img-box">
+                    <a href="a_j_public_responses.html">
+                        <img src="https://res.cloudinary.com/dyukqlm2w/image/upload/v1693312958/zx1k9ruost78osdskuyv.jpg" class="bsb_main_card_image" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h2>Public Responses</h2>
+                    <p>
+                        Green Eyed Campus, Peaceful Environment, friendly faculty-student interaction...
+                    </p>
+                    <a href="a_j_public_responses.html"> Know More </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="">
+            <div class="row">
+            <div class="col-12">
+            <div class="chatgpt_clone_description">
+                <p class="chatgpt_clone_description_1"> * BSB is an experiment bot. It may generate inappropriate responses to your prompts! </p>
+            </div>
+            </div>
+            </div>
+            </div>
+    
+    
+            <div class="chat-bot-container mb-5">
+                <gradio-app src="https://karthikalampally-newgenai.hf.space"></gradio-app>
+                <!-- <iframe class="chat-bot-container-iframe" height="100%" width="100%" frameborder="0" src="https://lavanyaburlagadda-chatbot-openai-playht-old.hf.space/?__theme=dark"></iframe> -->
+            </div>
+            <div class=""></div>
+            <a href="biet_official_website.html">
+    
+                <div class="">
+                    <div class="row">
+                    <div class="col-12">
+                    <button class="btn btn-primary mb-4"> Back </button>
+                    </div>
+                    </div>
+                    </div>
+            
+            </a>
+
+        <script type="text/javascript">
+            let toggle_el = document.getElementById("toggle_id");
+            toggle_el.classList.toggle("body");
+        </script> 
+
+    </body>
+
+</html>

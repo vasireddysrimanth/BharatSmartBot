@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>@sky.git - Image Slider w/ animation effect</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="a_e_branch_directors.css">
+
+</head>
+
+<body>
+    <div class="bg-container">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693391721/replicate-prediction-ikitqbjbnlgaeqcexw63vwesbu_hcci3w.png" />
+                    <div class="paragraph pl-2 mt-3">
+                        <span class="name">Name:</span>:<span class="name_font">Dr.Mahesh Lokhande</span><br>
+                        <span class="paragraph">Designation</span> : <span class="name_font"> HOD</span>
+                        <span class="paragraph"><br>Branch</span> : <span class="name_font"> CSE</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693391867/replicate-prediction-gcrjt6zbvrqlcy77ygckuo2yom-removebg-preview_kvbts5.png" />
+                    <div class="paragraph p-3">
+                        <span class="name">Name:</span>:<span class="name_font">I.Ravi Kumar</span><br>
+                        <span class="paragraph">Designation</span> : <span class="name_font"> HOD</span>
+                        <span class="paragraph"><br>Branch</span> : <span class="name_font"> ECE</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693391779/replicate-prediction-ppcgtbbbtgz56hceocqrnhdr2a-removebg-preview_acdlnt.png" />
+                    <div class="paragraph p-3">
+                        <span class="name">Name:</span>:<span class="name_font">Dr.Pradyumna Ranjan Ghosh </span><br>
+                        <span class="paragraph">Designation</span> : <span class="name_font"> HOD</span>
+                        <span class="paragraph"><br>Branch</span> : <span class="name_font"> EEE</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/dait0syig/image/upload/v1693392858/wqf1z6ltjqcokubysnsv.png" />
+                    <div class="paragraph p-3">
+                        <span class="name">Name:</span>:<span class="name_font">Pradeep Chawan </span><br>
+                        <span class="paragraph">Designation</span> : <span class="name_font"> HOD</span>
+                        <span class="paragraph"><br>Branch</span> : <span class="name_font"> MECH</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693391816/replicate-prediction-xpjz7pbblb6wff3ggcfuqa3bka_ndtadf.png" />
+                    <div class="paragraph p-3">
+                        <span class="name">Name:</span>:<span class="name_font">Dr.VenuGopal Kurnool</span><br>
+                        <span class="paragraph">Designation</span> : <span class="name_font"> HOD</span>
+                        <span class="paragraph"><br>Branch</span> : <span class="name_font"> CIVIL</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693391984/replicate-prediction-7no24erbuaiam4tu7yozpslfqq_ag7bgy.jpg" />
+                    <div class="paragraph p-3">
+                        <span class="name">Name:</span>:<span class="name_font">Dr.Amit Pandey</span><br>
+                        <span class="paragraph">Designation</span> : <span class="name_font"> HOD</span>
+                        <span class="paragraph"><br>Branch</span> : <span class="name_font"> CSM</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/karthikscloudapp/image/upload/v1693392018/replicate-prediction-wl4o53bbvyg4di2svwfs5sr32y-removebg-preview_e3yeoh.png" />
+                    <div class="paragraph p-3">
+                        <span class="name">Name:</span>:<span class="name_font">Dr.Karpaga Selvi</span><br>
+                        <span class="paragraph">Designation</span> : <span class="name_font"> HOD</span>
+                        <span class="paragraph"><br>Branch</span> : <span class="name_font"> IT, CS & DS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script>
+        <script src="script.js"></script>
+    </div>
+
+    <div style="padding-top:40%;"> 
+        <a href="bsb_html.html">
+            <button class="btn"> Back </button>    
+        </a>
+    </div>
+
+<script type="text/javascript"> 
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "1",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 4,
+            slideShadows: false
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2
+            }
+        }
+    });
+</script>
+
+</body>
+
+</html>

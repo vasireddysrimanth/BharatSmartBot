@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+  <style>
+
+
+    body {
+        font-family: "Josefin Sans", sans-serif;
+        background: #1e1e1e;
+        color: whitesmoke;
+      }
+      
+      body h1 {
+        text-align: center;
+      }
+      
+      .card-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+        align-self: center;
+      }
+      
+      .card {
+        margin: 20px 40px 40px 20px;
+        width: 300px;
+        height: 400px;
+        transform-style: preserve-3d;
+        perspective: 600px;
+        transition: 0.5s;
+      }
+      
+      .card .front {
+        border: solid 10px whitesmoke;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: 0.5s;
+        -webkit-box-shadow: 0px 10px 13px -7px #000000,
+          5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+      
+      .card:hover .front {
+        transform: rotateY(-180deg);
+      }
+      
+      .card .back {
+        border: solid 10px whitesmoke;
+        width: 100%;
+        height: 100%;
+        background: #1d1d1d;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        transition: 0.5s;
+        -webkit-box-shadow: 0px 10px 13px -7px #000000,
+          5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      
+      
+      }
+      
+      .card:hover .back {
+        transform: rotateY(0deg);
+      }
+      
+      .card .back .details {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      .card .back .details .caption {
+        font-weight: 100;
+        font-style: italic;
+      }
+      
+      .card .back .details .caption,
+      h2,
+      span {
+        color: whitesmoke;
+      }
+      
+      .social-icon {
+        padding: 10px;
+      }
+      
+      .social-icon a {
+        display: inline-block;
+        width: 36px;
+        background: #333;
+        text-align: center;
+        text-decoration: none;
+        color: whitesmoke;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+      
+      .social-icon a .fab {
+        line-height: 36px;
+      }
+      
+      .social-icon a:hover {
+        background: rgb(104, 240, 215);
+      }
+      
+      .social-icon a:hover i {
+        transition: 0.5s;
+        color: #333;
+      }
+      .img{
+        height:400px;
+        width:300px;
+      }
+    
+      .btn {
+        border-radius: 8px;
+        background-color: #3662f5;
+        width: 70px;
+        height: 40px;
+        font-size: 16px;
+        border-style: solid;
+        border-color: white;
+        color: white;
+        margin-left: 24px;
+      }
+
+  </style>
+
+</head>
+
+  <body>
+    <div class="card-container">
+      <div class="card col-12 col-md-6 col-lg-4">
+        <div class="front">
+            <img src="https://res.cloudinary.com/deqtk4gs7/image/upload/v1693578278/oukyvqjmzx6w6auoji82.jpg" class="img"
+            alt="" />
+          
+        </div>
+        <div class="back">
+          <div class="details">
+            <div class="caption">
+              " Prof. G. Kumaraswamy Rao, Director (R&D), BIET (Former Director & O.S. of DLRL Ministry of Defence)Prof. G. Kumaraswamy, a former director of the Defence Electronics Research Lab and the Electronics Systems Engineering Centre, worked with Dr. A.P.J. Abdul Kalam on the Integrated Guided Missile Program. "
+            </div>
+            <h2>G. Kumaraswamy Rao</h2>
+            <span>Director & Professor</span>
+
+            <div class="social-icon">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-12 col-md-6 col-lg-4">
+        <div class="front">
+            <img src="https://res.cloudinary.com/deqtk4gs7/image/upload/v1693578049/ega4l37sxm7s8hdqdlal.jpg" alt="" class="img" />
+        </div>
+        <div class="back">
+          <div class="details">
+            <div class="caption">
+              " Sri Ch. Venugopal Reddy Chairman & Secretary, Bharat Group of Institutions Sri. Ch. Venugopal Reddy, Chairman, was awarded as an EMINENT EDUCATIONIST, entrepreneurs, and visionary thinkers who have displayed skills in creating and sustaining educational institutions, departments or programs."
+            </div>
+            <h2>Sri Ch. Venugopal Reddy</h2>
+            <span>Hon'ble Chairman & Founder </span>
+
+            <div class="social-icon">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-12 col-md-6 col-lg-4">
+        <div class="front">
+          <img src="https://res.cloudinary.com/deqtk4gs7/image/upload/v1693578383/dsdf10mh1j5grjk95d1o.jpg" class="img"
+            alt="" />
+        </div>
+        <div class="back">
+          <div class="details">
+            <div class="caption">
+              " Dr. Merugu Lakshminarayana,Professor of ECE, BIET (SCIENTIST 'H' (Retd.) & Chair (2016 & 2017), IEEE Hyderabad)Dr. Lakshminarayana did B. Tech in Electronics and Communication Engineering (ECE) from JNTU, Hyderabad in 1978, M. Tech in Microwave and Radar Engineering from IIT Kharagpur in 1980"
+            </div>
+            <h2>Dr. Merugu Lakshminarayana</h2>
+            <span>Sr.Professor</span>
+
+            <div class="social-icon">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%;">
+        <a href="bsb_html.html">
+            <button class="btn"> Back </button>
+        </a>
+      </div>
+    </div>
+    
+    
+  </body>
+
+  </html>

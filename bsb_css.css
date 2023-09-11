@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.bsb_main_card_description {
+    font-size: 80%;
+    font-family: "verdana";
+
+}
+
+.bsb_main_card_image {
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.bsb_main_card_title {
+    font-size: 150%;
+    font-family: "georgia";
+    color: #040D12;
+}
+
+.bsb_main_card {
+    text-align: center;
+    font-family: "arial";
+    background-color: #ffffff;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-radius: 16px;
+    height: 400px;
+
+}
+
+
+.chat-bot-container {
+    padding-left: 5%;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+
+.bcb_section {}
+
+.bsb_bg_container {
+    background-color: #0B2447;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .bsb_logo {
+        height: 25%;
+        padding-top: 5%;
+        margin-top: -2%;
+    }
+  .bsb_logo_container {
+        text-align: center;
+        padding-left: 5%;
+    }
+
+    .logo_gif {
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        padding: 20px;
+        margin-left: 20% !important;
+
+    } 
+
+    .bsb_logo_text {
+        font-size: 450% !important;
+        padding-left: 20% !important;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .bsb_logo_container {
+        text-align: center;
+        padding-left: 10%;
+        border-radius: 2px;
+        border-width: 2px;
+        border-color: white;
+    }
+
+    .logo_gif {
+        width: 100px;
+        height: 100px;
+        border-radius: 60px;
+        padding: 20px;
+
+    }
+
+    .bsb_logo {
+        height: 15%;
+        padding-top: 5%;
+
+    }
+
+}
+
+.bsb_logo_text {
+    color: white;
+    font-family: "Times New Roman";
+    margin-top: 15%;
+    font-size: 400%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+    
+
+  
+
+.chatgpt_clone_description {
+    font-family: "verdana";
+    font-size: 12px;
+    color: #EEEEEE;
+
+}
+
+
+.chatgpt_clone_description_1 {
+    margin-bottom: -10px;
+}
